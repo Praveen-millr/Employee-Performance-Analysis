@@ -3,140 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Performance Analysis</title>
+    <title>Employee Performance Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .container { width: 80%; margin: auto; overflow: hidden; background: white; padding: 20px; border-radius: 10px; }
-        h1, h2 { text-align: center; color: #333; }
-        .section { margin-bottom: 20px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
-        img { display: block; margin: auto; width: 80%; max-width: 600px; border-radius: 8px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        table, th, td { border: 1px solid #ddd; }
-        th, td { padding: 8px; text-align: center; }
-        th { background-color: #333; color: white; }
-        footer { text-align: center; padding: 10px; background: #333; color: white; margin-top: 20px; }
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 0; background: #f4f4f4; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        h2 { color: #333; }
+        .table-container { overflow-x: auto; max-height: 300px; border: 1px solid #ddd; background: white; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #007BFF; color: white; }
+        img { max-width: 100%; height: auto; border-radius: 5px; margin-top: 10px; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Employee Performance Analysis</h1>
-        <p style="text-align: center;">A Data Analysis Project for Understanding Employee and Team Productivity</p>
-
-        <!-- About Section -->
-        <div class="section">
-            <h2>About the Project</h2>
-            <p>This project analyzes employee performance based on tasks completed, time spent, and overall team efficiency.</p>
-        </div>
-
-        <!-- Problem Statement -->
-        <div class="section">
-            <h2>Problem Statement</h2>
-            <p>Companies struggle to evaluate employee performance objectively. This project provides insights into productivity trends.</p>
-        </div>
-
-        <!-- Dataset Section -->
-        <div class="section">
-            <h2>Dataset</h2>
-            <p>The dataset contains details about employees, projects, and tasks.</p>
-        </div>
-
-        <!-- Extraction -->
-        <div class="section">
-            <h2>Step 1: Data Extraction</h2>
-            <p>Extracted raw data from CSV files.</p>
-            <table>
-                <tr>
-                    <th>Employee ID</th>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Project ID</th>
-                    <th>Hours Worked</th>
-                </tr>
-                <tr>
-                    <td>101</td>
-                    <td>John Doe</td>
-                    <td>Sales</td>
-                    <td>P001</td>
-                    <td>40</td>
-                </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Jane Smith</td>
-                    <td>IT</td>
-                    <td>P002</td>
-                    <td>35</td>
-                </tr>
+        
+        <h2>Project Overview</h2>
+        <p><b>Scenario:</b> Analyzing employee performance in various projects.</p>
+        <p><b>Problem Statement:</b> Identify key contributors, optimize workload, and improve efficiency.</p>
+        <p><b>Steps to Achieve:</b> Data Extraction → Cleaning → Analysis → Visualization.</p>
+        
+        <h2>Sample Data</h2>
+        <h3>Employees</h3>
+        <div class="table-container">
+            <table id="employeeTable">
+                <thead>
+                    <tr><th>ID</th><th>Name</th><th>Team</th><th>Role</th></tr>
+                </thead>
+                <tbody></tbody>
             </table>
         </div>
-
-        <!-- Cleaning -->
-        <div class="section">
-            <h2>Step 2: Data Cleaning</h2>
-            <p>Removed duplicates, handled missing values, and formatted columns.</p>
-            <table>
-                <tr>
-                    <th>Employee ID</th>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Project ID</th>
-                    <th>Hours Worked</th>
-                </tr>
-                <tr>
-                    <td>101</td>
-                    <td>John Doe</td>
-                    <td>Sales</td>
-                    <td>P001</td>
-                    <td>40</td>
-                </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Jane Smith</td>
-                    <td>IT</td>
-                    <td>P002</td>
-                    <td>35</td>
-                </tr>
+        
+        <h3>Projects</h3>
+        <div class="table-container">
+            <table id="projectTable">
+                <thead>
+                    <tr><th>ID</th><th>Project Name</th><th>Team</th></tr>
+                </thead>
+                <tbody></tbody>
             </table>
         </div>
-
-        <!-- EDA -->
-        <div class="section">
-            <h2>Step 3: Exploratory Data Analysis (EDA)</h2>
-            <p>Visualized trends in employee performance.</p>
-            <img src="results/employee_performance.png" alt="Employee Performance">
-            <p style="text-align: center;"><i>Employee Performance Analysis</i></p>
-        </div>
-
-        <!-- Results -->
-        <div class="section">
-            <h2>Step 4: Final Results</h2>
-            <p>Key insights from the analysis:</p>
-            <table>
-                <tr>
-                    <th>Metric</th>
-                    <th>Top Performer</th>
-                    <th>Best Team</th>
-                    <th>Highest Workload Project</th>
-                </tr>
-                <tr>
-                    <td>Efficiency Score</td>
-                    <td>John Doe</td>
-                    <td>IT Team</td>
-                    <td>P002</td>
-                </tr>
+        
+        <h3>Tasks</h3>
+        <div class="table-container">
+            <table id="taskTable">
+                <thead>
+                    <tr><th>ID</th><th>Task</th><th>Assigned To</th><th>Project</th><th>Time (Hours)</th></tr>
+                </thead>
+                <tbody></tbody>
             </table>
-
-            <img src="results/team_performance.png" alt="Team Performance">
-            <p style="text-align: center;"><i>Team Performance Analysis</i></p>
-
-            <img src="results/project_performance.png" alt="Project Performance">
-            <p style="text-align: center;"><i>Project Performance Analysis</i></p>
         </div>
+        
+        <h2>Visualization Results</h2>
+        <h3>Employee Performance</h3>
+        <img src="results/employee_performance.png" alt="Employee Performance">
+        
+        <h3>Project Performance</h3>
+        <img src="results/project_performance.png" alt="Project Performance">
+        
+        <h3>Team Performance</h3>
+        <img src="results/team_performance.png" alt="Team Performance">
     </div>
-
-    <footer>
-        <p>Created by Praveen | Hosted on GitHub Pages</p>
-    </footer>
-
+    
+    <script>
+        function generateFakeData() {
+            const teams = ['Dev', 'QA', 'Design', 'Management', 'Admin', 'Data'];
+            const projects = ['Sopheon', 'Revolt World', 'Planted', 'SRMG', 'NBC'];
+            
+            const employees = Array.from({ length: 10 }, (_, i) => ({
+                id: i + 1,
+                name: `Employee ${i + 1}`,
+                team: teams[Math.floor(Math.random() * teams.length)],
+                role: ['Engineer', 'Analyst', 'Manager', 'Lead'][Math.floor(Math.random() * 4)]
+            }));
+            
+            const projectData = projects.map((p, i) => ({ id: i + 1, name: p, team: teams[i % teams.length] }));
+            
+            const tasks = Array.from({ length: 10 }, (_, i) => ({
+                id: i + 1,
+                task: `Task ${i + 1}`,
+                assignedTo: employees[i % employees.length].name,
+                project: projectData[i % projectData.length].name,
+                time: Math.floor(Math.random() * 10) + 1
+            }));
+            
+            function populateTable(id, data, keys) {
+                const tableBody = document.querySelector(`#${id} tbody`);
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    keys.forEach(key => {
+                        const td = document.createElement('td');
+                        td.textContent = row[key];
+                        tr.appendChild(td);
+                    });
+                    tableBody.appendChild(tr);
+                });
+            }
+            
+            populateTable('employeeTable', employees, ['id', 'name', 'team', 'role']);
+            populateTable('projectTable', projectData, ['id', 'name', 'team']);
+            populateTable('taskTable', tasks, ['id', 'task', 'assignedTo', 'project', 'time']);
+        }
+        
+        generateFakeData();
+    </script>
 </body>
 </html>
