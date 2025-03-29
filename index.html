@@ -5,36 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Performance Analysis</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .image-container { display: flex; justify-content: space-around; flex-wrap: wrap; }
-        .image-box { margin: 10px; }
-        .image-box img { width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { width: 80%; margin: auto; overflow: hidden; background: white; padding: 20px; border-radius: 10px; }
+        h1, h2 { text-align: center; color: #333; }
+        .section { margin-bottom: 20px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+        img { display: block; margin: auto; width: 80%; max-width: 600px; border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 8px; text-align: center; }
+        th { background-color: #333; color: white; }
+        footer { text-align: center; padding: 10px; background: #333; color: white; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>📊 Employee Performance Analysis</h1>
-        <p>Analyzing employee efficiency, project contributions, and team performance.</p>
+        <h1>Employee Performance Analysis</h1>
+        <p style="text-align: center;">A Data Analysis Project for Understanding Employee and Team Productivity</p>
 
-        <h2>🔍 Key Performance Insights</h2>
-        
-        <div class="image-container">
-            <div class="image-box">
-                <h3>Employee Performance</h3>
-                <img src="results/employee_performance.png" alt="Employee Performance">
-            </div>
-            <div class="image-box">
-                <h3>Project Performance</h3>
-                <img src="results/project_performance.png" alt="Project Performance">
-            </div>
-            <div class="image-box">
-                <h3>Team Performance</h3>
-                <img src="results/team_performance.png" alt="Team Performance">
-            </div>
+        <!-- About Section -->
+        <div class="section">
+            <h2>About the Project</h2>
+            <p>This project analyzes employee performance based on tasks completed, time spent, and overall team efficiency.</p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="section">
+            <h2>Problem Statement</h2>
+            <p>Companies struggle to evaluate employee performance objectively. This project provides insights into productivity trends.</p>
+        </div>
+
+        <!-- Dataset Section -->
+        <div class="section">
+            <h2>Dataset</h2>
+            <p>The dataset contains details about employees, projects, and tasks.</p>
+        </div>
+
+        <!-- Extraction -->
+        <div class="section">
+            <h2>Step 1: Data Extraction</h2>
+            <p>Extracted raw data from CSV files.</p>
+            <table>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Project ID</th>
+                    <th>Hours Worked</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>Sales</td>
+                    <td>P001</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>IT</td>
+                    <td>P002</td>
+                    <td>35</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Cleaning -->
+        <div class="section">
+            <h2>Step 2: Data Cleaning</h2>
+            <p>Removed duplicates, handled missing values, and formatted columns.</p>
+            <table>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Project ID</th>
+                    <th>Hours Worked</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>Sales</td>
+                    <td>P001</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>IT</td>
+                    <td>P002</td>
+                    <td>35</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- EDA -->
+        <div class="section">
+            <h2>Step 3: Exploratory Data Analysis (EDA)</h2>
+            <p>Visualized trends in employee performance.</p>
+            <img src="results/employee_performance.png" alt="Employee Performance">
+            <p style="text-align: center;"><i>Employee Performance Analysis</i></p>
+        </div>
+
+        <!-- Results -->
+        <div class="section">
+            <h2>Step 4: Final Results</h2>
+            <p>Key insights from the analysis:</p>
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>Top Performer</th>
+                    <th>Best Team</th>
+                    <th>Highest Workload Project</th>
+                </tr>
+                <tr>
+                    <td>Efficiency Score</td>
+                    <td>John Doe</td>
+                    <td>IT Team</td>
+                    <td>P002</td>
+                </tr>
+            </table>
+
+            <img src="results/team_performance.png" alt="Team Performance">
+            <p style="text-align: center;"><i>Team Performance Analysis</i></p>
+
+            <img src="results/project_performance.png" alt="Project Performance">
+            <p style="text-align: center;"><i>Project Performance Analysis</i></p>
         </div>
     </div>
+
+    <footer>
+        <p>Created by Praveen | Hosted on GitHub Pages</p>
+    </footer>
 
 </body>
 </html>
