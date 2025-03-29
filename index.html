@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Performance Analysis</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; }
         h1, h2 { color: #2c3e50; }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .container { max-width: 1200px; margin: auto; }
         .section { margin-bottom: 40px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
@@ -15,35 +15,58 @@
         .scrollable-table { overflow-x: auto; max-height: 300px; }
         .image-container img { width: 100%; max-width: 800px; margin-top: 20px; }
         pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        .nav { position: sticky; top: 0; background: #2c3e50; padding: 10px; text-align: center; }
-        .nav a { color: white; text-decoration: none; padding: 10px 15px; display: inline-block; }
-        .nav a:hover { background: #1a252f; }
+        .nav { position: fixed; top: 0; left: 0; width: 100%; background: #2c3e50; color: white; padding: 10px; text-align: center; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="nav">
         <a href="#overview">Overview</a>
+        <a href="#problem">Problem Statement</a>
+        <a href="#steps">Project Steps</a>
         <a href="#eda">EDA</a>
-        <a href="#visuals">Visuals</a>
+        <a href="#visualization">Visualization</a>
         <a href="#conclusion">Conclusion</a>
-        <a href="https://github.com/Praveen-millr/Employee-Performance-Analysis" target="_blank">GitHub Repo</a>
     </div>
-    
     <div class="container">
         <h1>Employee Performance Analysis</h1>
         
-        <div class="section" id="overview">
+        <div id="overview" class="section">
             <h2>Project Overview</h2>
-            <p>This project evaluates employee performance across teams and projects using a structured data analysis pipeline.</p>
+            <p>This project analyzes employee performance across multiple teams and projects. It follows a structured data analysis pipeline to derive meaningful insights and improve efficiency.</p>
+        </div>
+
+        <div id="problem" class="section">
+            <h2>Problem Statement</h2>
+            <p>Companies struggle to measure employee performance effectively across different teams and projects. The goal of this analysis is to identify key performance metrics, improve workforce efficiency, and enhance productivity through data-driven insights.</p>
+        </div>
+
+        <div id="steps" class="section">
+            <h2>Project Steps & Workflow</h2>
+            <p>The analysis follows these key phases:</p>
+            <ol>
+                <li><strong>Step 1: Data Extraction</strong> - Collecting data from CSV files, databases, and APIs.</li>
+                <li><strong>Step 2: Data Cleaning</strong> - Removing duplicates, handling missing values, and standardizing formats.</li>
+                <li><strong>Step 3: Data Processing</strong> - Merging datasets, transforming data, and calculating new metrics.</li>
+                <li><strong>Step 4: Exploratory Data Analysis (EDA)</strong> - Identifying key trends and anomalies.</li>
+                <li><strong>Step 5: Data Visualization</strong> - Creating insightful charts to showcase findings.</li>
+                <li><strong>Step 6: Conclusion & Recommendations</strong> - Summarizing insights and proposing actions.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Scenarios & Use Cases</h2>
+            <p>This analysis can be used in various real-world scenarios:</p>
             <ul>
-                <li><strong>Dataset:</strong> Employee work logs, performance scores</li>
-                <li><strong>Tools Used:</strong> Python (Pandas, Matplotlib), SQL, Excel</li>
-                <li><strong>Goal:</strong> Identify high-performing employees and optimize resource allocation</li>
+                <li>Identifying underperforming employees for training programs.</li>
+                <li>Evaluating workload distribution across teams.</li>
+                <li>Optimizing project assignments based on employee efficiency.</li>
+                <li>Predicting employee burnout risks based on work hours.</li>
             </ul>
         </div>
 
-        <div class="section" id="eda">
-            <h2>Exploratory Data Analysis (EDA)</h2>
+        <div id="eda" class="section">
+            <h2>Step 4: Exploratory Data Analysis (EDA)</h2>
             <p>Analyzed key performance metrics:</p>
             <ul>
                 <li>Average hours worked per team.</li>
@@ -52,8 +75,9 @@
             </ul>
         </div>
 
-        <div class="section" id="visuals">
-            <h2>Data Visualization</h2>
+        <div id="visualization" class="section">
+            <h2>Step 5: Data Visualization</h2>
+            <p>Generated visual representations of the analyzed data.</p>
             <div class="image-container">
                 <h3>Employee Performance</h3>
                 <img src="results/employee_performance.png" alt="Employee Performance Visualization">
@@ -64,15 +88,26 @@
             </div>
         </div>
 
-        <div class="section" id="conclusion">
-            <h2>Conclusion</h2>
-            <p>The analysis highlights key insights:</p>
+        <div id="conclusion" class="section">
+            <h2>Conclusion & Next Steps</h2>
+            <p><strong>Key Findings:</strong></p>
             <ul>
-                <li>Teams with higher collaboration tend to have better performance scores.</li>
-                <li>Some projects required overtime, leading to burnout risks.</li>
-                <li>Performance optimization strategies should focus on balancing workloads.</li>
+                <li>Employees working more than 40 hours tend to have higher performance scores.</li>
+                <li>QA and Data teams show better efficiency compared to other teams.</li>
+                <li>Some projects suffer from inconsistent work distribution.</li>
             </ul>
-            <p>For more details, check the full project on <a href="https://github.com/Praveen-millr/Employee-Performance-Analysis" target="_blank">GitHub</a>.</p>
+            <p><strong>Future Improvements:</strong></p>
+            <ul>
+                <li>Integrating machine learning models to predict performance trends.</li>
+                <li>Enhancing dashboards with interactive visualizations.</li>
+                <li>Automating data extraction for real-time insights.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Project Repository</h2>
+            <p>For complete code and datasets, visit the GitHub repository:</p>
+            <p><a href="https://github.com/Praveen-millr/Employee-Performance-Analysis" target="_blank">GitHub Repository</a></p>
         </div>
     </div>
 </body>
